@@ -1,0 +1,774 @@
+@media(max-width: 1200px) {
+  .servises {
+    &__list {
+      gap: 20px;
+    }
+
+    &__item {
+      padding: 20px 120px 20px 20px;
+
+      &::after {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    &__item-title {
+      max-width: 300px;
+    }
+
+    &__item-text {
+      max-width: 280px;
+      font-size: 13px;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .contacts-top {
+    &__btn {
+      display: none;
+    }
+  }
+
+  .main {
+    &__title {
+      max-width: 790px;
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+    &__link {
+      min-width: 280px;
+    }
+  }
+
+
+  .servises {
+    &__item-text {
+      max-width: 260px;
+
+    }
+
+    &__item {
+
+      &::after {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &__item-btn {
+      font-size: 14px;
+    }
+  }
+
+  .catalog {
+    &__item-text {
+      padding-right: 100px;
+    }
+
+    &__card {
+      max-width: 44%;
+      margin: 10px;
+      width: 100%;
+    }
+
+    &__card-btn {
+      max-width: 230px;
+    }
+  }
+
+  .contacts {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-flow: row;
+    }
+
+    &__item {
+      &:nth-child(5) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .popup {
+    &__btn {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .header {
+    &__inner {
+      position: relative;
+    }
+  }
+
+  .logo,
+  .logo-bottom {
+    max-width: 45px;
+  }
+
+  .logo {
+    z-index: 11;
+  }
+
+  .menu {
+    margin-bottom: 30px;
+
+    &__btn {
+      display: block;
+      z-index: 11;
+
+      &--active {
+        .menu__line {
+          background-color: transparent;
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    &__inner {
+      background-color: #fff;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      z-index: 10;
+      top: 63px;
+      margin: 0;
+      padding: 0 0 35px;
+      width: 100vw;
+      transform: translateY(-200%);
+      transition: transform 1s;
+      right: -15px;
+
+      &--active {
+        transform: translateY(0%);
+        transition: transform 1s;
+      }
+    }
+  }
+
+  .contacts-top {
+    flex-direction: column;
+    margin: auto 0 80px;
+
+    &__list {
+      margin: 0 0 20px;
+    }
+
+    &__btn {
+      display: inline-block;
+    }
+  }
+
+  .main {
+    height: calc(100vh - 63px);
+
+    &-fixed {
+      margin-top: 63px;
+    }
+
+    &__title {
+      font-size: 35px;
+    }
+
+    &__subtitle {
+      span {
+        display: none;
+      }
+    }
+
+    &__link {
+      bottom: 14%;
+    }
+  }
+
+  .servises {
+    padding: 80px 0 120px;
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      margin: 0 auto;
+
+      &::after {
+        width: 150px;
+        height: 150px;
+        right: 10%;
+      }
+    }
+  }
+
+  .catalog {
+    &__item {
+      padding: 10px 20px;
+    }
+
+    &__card {
+      padding: 10px 5px;
+    }
+
+    &__item-title {
+      max-width: 240px;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    &__item-text {
+      font-size: 14px;
+    }
+
+    &__card-title {
+      font-size: 15px;
+    }
+
+    &__card-text {
+      font-size: 13px;
+    }
+
+    &__card-btn {
+      font-size: 13px;
+    }
+  }
+
+  .contacts {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: column;
+      max-width: 100%;
+      gap: 8px;
+
+    }
+
+    &__map {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    .menu {
+      display: none;
+    }
+
+    .privacy__link {
+      font-size: 15px;
+    }
+  }
+
+  .popup-product {
+    &__title {
+      font-size: 15px;
+    }
+
+    &__close {
+      top: 5px;
+      right: 5px;
+
+      &::before,
+      &::after {
+        width: 20px;
+      }
+    }
+
+    &__img {
+      max-width: 200px;
+    }
+
+    &__info,
+    &__characteristic {
+      font-size: 12px;
+
+      span {
+        font-size: 13px;
+        margin-bottom: 5px;
+
+      }
+    }
+
+    &__card-btn {
+      margin-top: 10px;
+      padding: 10px 25px;
+      border-radius: 15px;
+      font-size: 14px;
+    }
+  }
+
+  .popup {
+    &__content {
+      padding: 40px 20px;
+    }
+
+    &__close {
+      top: 5px;
+      right: 5px;
+
+      &::before,
+      &::after {
+        width: 20px;
+      }
+    }
+
+    &__title {
+      font-size: 25px;
+    }
+
+    &__title-text {
+      font-size: 14px;
+    }
+
+    &__top {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-flow: row;
+      margin-bottom: 25px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      margin: 0 0 20px;
+    }
+
+    &__btn-text {
+      max-width: 200px;
+      text-align: center;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+body.menu-lock{
+  overflow: hidden;
+}
+  .logo,
+  .logo-bottom {
+    max-width: 36px;
+  }
+
+  .menu {
+    &__inner {
+      top: 55px;
+      height: calc(100vh - 55px);
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      text-align: center;
+      padding: 10px;
+
+      &:not(:last-child) {
+        margin: 0 0 2.5vh;
+      }
+    }
+  }
+
+  .contacts-top {
+
+
+    &--privacy {
+      margin: 0;
+    }
+
+    &__list {
+      margin: 0 0 5px;
+
+      &--privacy {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &__link {
+      padding: 8px 15px;
+    }
+  }
+
+  .main {
+    height: calc(100vh - 55px);
+
+    &__title {
+      font-size: 3.9vh;
+    }
+
+    &__subtitle {
+      font-size: 2.7vh;
+      margin-bottom: 20vh;
+    }
+
+    &__link {
+      font-size: 14px;
+      min-width: 245px;
+    }
+  }
+
+  .servises {
+    &__title {
+      font-size: 30px;
+      display: block;
+      text-align: center;
+      margin-bottom: 30px;
+
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+      }
+    }
+
+    &__list {
+      display: block;
+
+    }
+
+    &__item {
+      padding: 20px;
+      align-items: center;
+      text-align: center;
+      max-width: 280px;
+      min-width: 0;
+      display: flex !important;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__item-title {
+      font-size: 15px;
+    }
+
+    &__item-text {
+      font-size: 11px;
+    }
+
+    .slick-track {
+      display: flex;
+    }
+
+    .slick-list {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slick-slide {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      li {
+        padding: 8px 10px;
+      }
+
+      button {
+        cursor: pointer;
+        background-color: $subaccent;
+        font-size: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        padding: 0;
+        transition: background-color 0.5s, border 0.5s;
+      }
+
+      .slick-active {
+        button {
+          background-color: $accent;
+        }
+      }
+    }
+  }
+
+  .catalog {
+    &__title {
+      font-size: 30px;
+      display: block;
+      text-align: center;
+      margin-bottom: 30px;
+
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+      }
+    }
+
+    &__item {
+      padding: 10px;
+      min-height: 70px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    &__item-title {
+      margin: 0 auto;
+      font-size: 16px;
+    }
+
+    &__card {
+      max-width: 200px;
+    }
+
+    &__item-text {
+      display: none;
+    }
+
+    &__item-top {
+      text-align: center;
+      padding: 10px 0;
+
+      svg {
+        display: none;
+      }
+    }
+
+    &__item-bottom {
+      margin-top: 20px;
+    }
+  }
+
+  .contacts {
+    padding: 30px 0;
+
+
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-flow: row;
+      max-width: 100%;
+      gap: 8px;
+    }
+
+    &__map {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    &__item {
+      &:nth-child(5) {
+        margin: 0;
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    .privacy__link {
+      font-size: 10px;
+    }
+  }
+
+  .popup-product {
+    &__img {
+      max-width: 100%;
+    }
+
+    &__top {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    &__close {
+      top: 40px;
+    }
+
+    &__img {
+      margin: 0 0 20px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__card-btn {
+      min-width: 220px;
+      margin: 0 auto 20px;
+      order: -1;
+    }
+  }
+
+  .popup {
+
+    &__title,
+    &__title-text {
+      display: none;
+    }
+
+    &__contacts-list {
+      display: inline-flex;
+      flex-direction: column;
+
+      .contacts-top__link {
+        text-align: center;
+
+      }
+    }
+
+    &__close {
+      top: 40px;
+    }
+
+    &__content {
+      padding: 80px 20px 80px;
+      height: 100%;
+      z-index: 20;
+      overflow: scroll;
+    }
+
+    &__label {
+      &--contacts {
+        text-align: center;
+
+        span {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .privacy {
+    padding: 0 0 20px;
+  }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+  .main {
+    &__title {
+      font-size: 5vh;
+      max-width: 400px;
+    }
+
+    &__subtitle {
+      font-size: 3vh;
+      max-width: 400px;
+    }
+  }
+
+  .contacts-top {
+    flex-direction: row;
+    margin-bottom: 0;
+
+    &__list {
+      margin: 0 20px 0;
+    }
+  }
+
+  .popup {
+    font-size: 12px;
+
+    &__content {
+      height: 100vh;
+      overflow: auto;
+      padding: 50px 20px;
+    }
+
+    &__title,
+    &__title-text {
+      display: none;
+    }
+
+    &__close {
+      top: 30px;
+      right: 5px;
+
+      &::before,
+      &::after {
+        width: 20px;
+      }
+    }
+
+    &__top {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: column;
+      gap: 5px 20px;
+      margin-bottom: 4vh;
+    }
+
+    &__contacts-list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__field {
+      height: 45px;
+
+      &--area {
+        height: 85%;
+      }
+    }
+
+    &__bottom {
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      padding: 13px 45px;
+      margin: 0 10px 0 0;
+    }
+        &__btn-text{
+          max-width: 65%;
+          font-size: 9px;
+          span{
+            display: inline;
+          }
+        }
+
+    &__label {
+      &--contacts {
+        font-size: 18px;
+margin-top: 0;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .popup-product {
+    &__top {
+      margin: 0;
+    }
+
+
+    &__info {
+      display: none;
+    }
+  }
+}

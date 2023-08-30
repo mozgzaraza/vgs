@@ -1,0 +1,157 @@
+$title: #CF52FE;
+$accent: #11e5b3;
+$bg: #001324;
+$bg-2: #001A30;
+$subaccent: #224F73;
+$field-bg: #03233E;
+$line: #053245;
+$bg-btn: linear-gradient(0deg, rgba(0, 137, 105, 0.8), rgba(12, 30, 48, 0));
+
+%exo2-400 {
+  font-family: 'Exo2-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%exo2-700 {
+  font-family: 'Exo2-Regular', sans-serif;
+  font-weight: 700;
+}
+
+%pressstart2p {
+  font-family: 'PressStart2P', sans-serif;
+  font-weight: 400;
+}
+
+%cyberpunk {
+  font-family: 'Cyberpunk', sans-serif;
+  font-weight: 400;
+}
+
+%hover-purple {
+  transition: color 0.5s, box-shadow 0.5s, background-color 1s, opacity 0.2s;
+
+  &:hover {
+    box-shadow: 0 0 5px #CF52FE,
+      0 0 25px #CF52FE,
+      0 0 50px #CF52FE,
+      0 0 100px #CF52FE;
+    background-color: #CF52FE;
+    color: #fff;
+  }
+
+  &:active {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+
+  &:focus {
+    border: 1px solid $title;
+  }
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%hover-green {
+  transition: color 0.5s, box-shadow 0.5s, background-color 1s, opacity 0.2s;
+
+  &:hover {
+    box-shadow: 0 0 5px #11e5b3,
+      0 0 25px #11E5B3,
+      0 0 50px #11E5B3,
+      0 0 100px #11E5B3;
+    background-color: #11E5B3;
+    color: #fff;
+  }
+
+  &:active {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px #11E5B3,
+      0 0 5px #11E5B3,
+      0 0 5px #11E5B3,
+      0 0 100px #11E5B3;
+    background-color: #11E5B3;
+    color: #fff;
+  }
+}
+
+
+%btn {
+  color: $accent;
+  padding: 17px 65px 13px;
+  text-transform: uppercase;
+  @extend %pressstart2p;
+  border-radius: 15px;
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 137, 105, 0.8), rgba(12, 30, 48, 0));
+  border: 1px solid $accent;
+  @extend %hover-green;
+  margin: 0 auto;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    background-image: url('../images/decor/btn-angleleft.svg');
+    @extend %bg-decor;
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: '';
+    background-image: url('../images/decor/btn-angleright.svg');
+    @extend %bg-decor;
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+%bg-decor {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media(max-width: 1200px) {
+  %btn {
+    padding: 13px 56px 9px;
+  }
+
+}
+
+@media(max-width: 768px) {
+  %btn {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 576px) {
+  %btn {
+font-size: 13px;
+    &::before {
+      left: 5px;
+    }
+
+    &::after {
+      right: 5px;
+    }
+
+  }
+}

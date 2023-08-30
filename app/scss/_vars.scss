@@ -1,0 +1,73 @@
+$default: #000;
+$subdefault: rgba(0, 0, 0, 0.6);
+$subaccent: #212864;
+$accent: #e39d00;
+
+
+%inter-500 {
+  font-family: 'Inter-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%inter-400 {
+  font-family: 'Inter-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%inter-700 {
+  font-family: 'Inter-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%montserrat-400 {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 400;
+}
+%btn-unpainted{
+  color: $subaccent;
+  
+    border-radius: 25px;
+    padding: 12px 40px;
+    box-shadow: 0px 0px 0px 1px $subaccent;
+    text-align: center;
+    @extend %inter-700;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      box-shadow: none;
+      color: #fff;
+      background-color: $accent;
+    }
+  
+    &:active {
+      opacity: 0.5;
+    }
+  
+    &:focus {
+      box-shadow: 0px 0px 0px 1px $accent;
+    }
+}
+%btn-painted {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 18px 75px;
+  background-color: $subaccent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: $accent;
+
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $accent;
+  }
+}
+

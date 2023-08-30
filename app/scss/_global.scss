@@ -1,0 +1,50 @@
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  @extend %inter-400;
+  color: $default;
+  background-color: #fff;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  @extend %inter-700;
+  font-size: 42px;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(227, 155, 0, 0.29);
+    height: 4px;
+    width: 150%;
+    bottom: -4px;
+    left: 0;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
